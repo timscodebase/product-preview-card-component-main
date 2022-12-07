@@ -1,0 +1,133 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.wrapper {
+  background: var(--cream);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--very-dark-blue);
+  font-size: 14px;
+}
+
+h1,
+.sale {
+  font-family: "Fraunces", serif;
+}
+
+.category {
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: url('./images/image-product-desktop.jpg') center/cover no-repeat;
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-right: 3rem;
+}
+
+.sale {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--dark-cyan);
+  padding: 0;
+}
+
+.original {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 650px;
+  /* height: 500px; */
+}
+
+.product-info {
+  padding: 2rem;
+}
+
+.details {
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  width: 100%;
+  background: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  fill: var(--white);
+  height: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .image {
+    background: url('./images/image-product-mobile.jpg') center/cover no-repeat;
+  }
+}
