@@ -21,7 +21,7 @@ p {
   padding-bottom: 2rem;
 }
 
-.wrapper {
+main {
   background: var(--cream);
   width: 100vw;
   height: 100vh;
